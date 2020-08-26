@@ -39,7 +39,8 @@
     "start:dev": "yarn start:dev:docker && yarn start:dev:server",
     "test": "yarn ts-node src/dockest",
     "snyk-protect": "snyk protect",
-    "prepare-rm": "yarn run snyk-protect"
+    "prepare-rm": "yarn run snyk-protect",
+    "push": "yarn build && git add . && git commit -m \"update\" && git push"
   },
   "dependencies": {
     "@types/bull": "^3.12.1",

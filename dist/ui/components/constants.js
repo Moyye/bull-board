@@ -10,12 +10,21 @@ exports.STATUSES = {
     paused: 'paused',
 };
 exports.FIELDS = {
-    active: ['attempts', 'data', 'name', 'opts', 'timestamps'],
-    completed: ['attempts', 'data', 'name', 'opts', 'timestamps', 'clean'],
+    active: ['attempts', 'data', 'id', 'name', 'opts', 'progress', 'timestamps'],
+    completed: [
+        'attempts',
+        'data',
+        'id',
+        'name',
+        'opts',
+        'progress',
+        'timestamps',
+    ],
     delayed: [
         'attempts',
         'data',
         'delay',
+        'id',
         'name',
         'opts',
         'promote',
@@ -27,13 +36,15 @@ exports.FIELDS = {
         'failedReason',
         'data',
         'opts',
+        'id',
         'name',
+        'progress',
         'retry',
         'timestamps',
         'clean',
     ],
-    latest: ['attempts', 'data', 'name', 'opts', 'timestamps'],
-    paused: ['attempts', 'data', 'name', 'opts', 'timestamps'],
-    waiting: ['data', 'name', 'opts', 'timestamps', 'clean'],
+    latest: ['attempts', 'data', 'id', 'name', 'opts', 'progress', 'timestamps'],
+    paused: ['attempts', 'data', 'id', 'name', 'opts', 'timestamps'],
+    waiting: ['data', 'id', 'name', 'opts', 'timestamps', 'clean'],
 };
 //# sourceMappingURL=constants.js.map
