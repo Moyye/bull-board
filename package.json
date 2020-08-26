@@ -39,7 +39,7 @@
     "start:dev": "yarn start:dev:docker && yarn start:dev:server",
     "test": "yarn ts-node src/dockest",
     "snyk-protect": "snyk protect",
-    "prepare": "yarn build"
+    "prepare-rm": "yarn run snyk-protect"
   },
   "dependencies": {
     "@types/bull": "^3.12.1",
