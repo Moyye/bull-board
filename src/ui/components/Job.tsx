@@ -121,9 +121,18 @@ const fieldComponents: Record<Field, React.FC<FieldProps>> = {
     )
   },
 
-  opts: ({ job }) => (
-    <Highlight className="json">{JSON.stringify(job.opts, null, 2)}</Highlight>
-  ),
+  opts: ({ job }) => {
+    const [showData, toggleData] = useState(false)
+
+    return (
+      <>
+        <button onClick={() => toggleData(!showData)}>Toggle data</button>
+        <Highlight className="json">
+          {showData && JSON.stringify(job.opts, null, 2)}
+        </Highlight>
+      </>
+    )
+  },
 
   retry: ({ retryJob }) => <button onClick={retryJob}>Retry</button>,
 

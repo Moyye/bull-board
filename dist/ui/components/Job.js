@@ -76,7 +76,12 @@ const fieldComponents = {
             react_1.default.createElement("button", { onClick: () => toggleData(!showData) }, "Toggle data"),
             react_1.default.createElement(react_highlight_1.default, { className: "json" }, showData && JSON.stringify(job.data, null, 2))));
     },
-    opts: ({ job }) => (react_1.default.createElement(react_highlight_1.default, { className: "json" }, JSON.stringify(job.opts, null, 2))),
+    opts: ({ job }) => {
+        const [showData, toggleData] = react_1.useState(false);
+        return (react_1.default.createElement(react_1.default.Fragment, null,
+            react_1.default.createElement("button", { onClick: () => toggleData(!showData) }, "Toggle data"),
+            react_1.default.createElement(react_highlight_1.default, { className: "json" }, showData && JSON.stringify(job.opts, null, 2))));
+    },
     retry: ({ retryJob }) => react_1.default.createElement("button", { onClick: retryJob }, "Retry"),
     clean: ({ cleanJob }) => react_1.default.createElement("button", { onClick: cleanJob }, "Clean"),
     promote: ({ delayedJob }) => react_1.default.createElement("button", { onClick: delayedJob }, "Promote"),
