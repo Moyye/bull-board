@@ -17,7 +17,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/vcapretz/bull-board.git"
+    "url": "git@github.com:Moyye/bull-board.git"
   },
   "bugs": {
     "url": "https://github.com/vcapretz/bull-board/issues"
