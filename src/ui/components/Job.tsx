@@ -40,16 +40,18 @@ const fieldComponents: Record<Field, React.FC<FieldProps>> = {
   timestamps: ({ job }) => (
     <div className="timestamps">
       <div>
-        <PlusIcon /> <Timestamp ts={job.timestamp} />
+        <PlusIcon /> 创建 <Timestamp ts={job.timestamp} />
       </div>
       {job.processedOn && (
         <div>
-          <PlayIcon /> <Timestamp ts={job.processedOn} prev={job.timestamp} />
+          <PlayIcon /> 开始{' '}
+          <Timestamp ts={job.processedOn} prev={job.timestamp} />
         </div>
       )}
       {job.finishedOn && (
         <div>
-          <CheckIcon /> <Timestamp ts={job.finishedOn} prev={job.processedOn} />
+          <CheckIcon /> 结束{' '}
+          <Timestamp ts={job.finishedOn} prev={job.processedOn} />
         </div>
       )}
     </div>

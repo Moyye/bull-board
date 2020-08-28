@@ -10,7 +10,7 @@ exports.STATUSES = {
     paused: 'paused',
 };
 exports.FIELDS = {
-    active: ['attempts', 'data', 'id', 'name', 'opts', 'timestamps'],
+    active: ['attempts', 'data', 'id', 'name', 'progress', 'opts', 'timestamps'],
     completed: ['attempts', 'data', 'id', 'name', 'opts', 'timestamps'],
     delayed: [
         'attempts',

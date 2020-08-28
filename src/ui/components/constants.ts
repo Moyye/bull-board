@@ -25,7 +25,7 @@ export type Field =
   | 'clean'
 
 export const FIELDS: Record<Status, Field[]> = {
-  active: ['attempts', 'data', 'id', 'name', 'opts', 'timestamps'],
+  active: ['attempts', 'data', 'id', 'name', 'progress', 'opts', 'timestamps'],
   completed: ['attempts', 'data', 'id', 'name', 'opts', 'timestamps'],
   delayed: [
     'attempts',

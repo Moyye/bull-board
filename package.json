@@ -31,7 +31,7 @@
     "lint": "eslint \"./src/**/*.ts*\"",
     "build": "yarn build:clean && yarn build:ui && yarn build:routes && cp ./src/ui/index.ejs dist/ui/index.ejs",
     "build:ui": "NODE_ENV=production webpack",
-    "build:ui:watch": "webpack --watch",
+    "build:ui:watch": "NODE_ENV=development webpack --watch",
     "build:routes": "yarn tsc",
     "build:clean": "rm -rf ./static ./dist",
     "start:dev:docker": "docker-compose up -d",

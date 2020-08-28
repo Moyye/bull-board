@@ -52,8 +52,8 @@ const run = () => {
   })
 
   app.use('/ui', router)
-  app.listen(3000, () => {
-    console.log('Running on 3000...')
+  app.listen(3333, () => {
+    console.log('Running on 3333...')
     console.log('For the UI, open http://localhost:3000/ui')
     console.log('Make sure Redis is running on port 6379 by default')
     console.log('To populate the queue, run:')
